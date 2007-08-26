@@ -3,21 +3,19 @@ Summary(pl.UTF-8):	Niewspierane wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-unsupported
 Version:	0.5.2
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		X11
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	71395f26d844be0417817b0953d0b9f6
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
-BuildRequires:	automake >= 1:1.7
-BuildRequires:	cairo-devel >= 1.0
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	compiz-bcop >= %{version}
 BuildRequires:	compiz-devel >= %{version}
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
-BuildRequires:	pango-devel
 BuildRequires:	pkgconfig
 Requires:	compiz >= %{version}
 Obsoletes:	beryl-plugins
@@ -60,6 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
+
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pl_PL,pl}
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pt_PT,pt}
 
 %find_lang %{name}
 
