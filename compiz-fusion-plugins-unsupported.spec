@@ -1,12 +1,12 @@
 Summary:	Unsupported Compiz Fusion plugins
 Summary(pl.UTF-8):	Niewspierane wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-unsupported
-Version:	0.6.0
+Version:	0.7.2
 Release:	1
 License:	GPL v2+
 Group:		X11
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	a5349418d781e3abff026fb2cf3e36d8
+# Source0-md5:	e73b4c9c448209007f8752edc518d3b2
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
@@ -58,9 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
-
-mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pl_PL,pl}
-mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pt_PT,pt}
 
 %find_lang %{name}
 
