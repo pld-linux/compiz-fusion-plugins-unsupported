@@ -1,12 +1,12 @@
 Summary:	Unsupported Compiz Fusion plugins
 Summary(pl.UTF-8):	Niewspierane wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-unsupported
-Version:	0.7.6
+Version:	0.7.8
 Release:	1
 License:	GPL v2+
 Group:		X11
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	de511745f755166326d9d361e9a3dba3
+# Source0-md5:	54938f9b4b42a8a29468429cd05a421c
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
