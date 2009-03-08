@@ -1,12 +1,12 @@
 Summary:	Unsupported Compiz Fusion plugins
 Summary(pl.UTF-8):	Niewspierane wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-unsupported
-Version:	0.7.8
+Version:	0.8.2
 Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	54938f9b4b42a8a29468429cd05a421c
+Source0:	http://releases.compiz-fusion.org/incoming/compiz-plugins-unsupported-%{version}.tar.bz2
+# Source0-md5:	3f824a0eee6ea1907337bdddb55f0228
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
@@ -37,7 +37,7 @@ Tile: Umożliwia kafelkowanie okien na pulpicie w podobny sposób jak
     ion3.
 
 %prep
-%setup -q
+%setup -q -n compiz-plugins-unsupported-%{version}
 
 %build
 %{__glib_gettextize}
@@ -59,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
 
-%find_lang %{name}
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
