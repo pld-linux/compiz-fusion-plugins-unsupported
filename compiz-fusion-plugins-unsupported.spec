@@ -59,12 +59,12 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
 
-%find_lang %{name} --all-name
+%find_lang compiz-plugins-unsupported
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f compiz-plugins-unsupported.lang
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_libdir}/compiz/*.so
