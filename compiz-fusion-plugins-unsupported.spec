@@ -1,13 +1,14 @@
+%define	pkgname	compiz-plugins-unsupported
 Summary:	Unsupported Compiz Fusion plugins
 Summary(pl.UTF-8):	Niewspierane wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-unsupported
-Version:	0.8.2
+Version:	0.8.4
 Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/incoming/compiz-plugins-unsupported-%{version}.tar.bz2
-# Source0-md5:	3f824a0eee6ea1907337bdddb55f0228
-URL:		http://forum.compiz-fusion.org/
+Source0:	http://releases.compiz.org/%{version}/%{pkgname}-%{version}.tar.bz2
+# Source0-md5:	73c7d70040cd4fd48ea29677b0f2f21e
+URL:		http://www.compiz.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
@@ -37,7 +38,7 @@ Tile: Umożliwia kafelkowanie okien na pulpicie w podobny sposób jak
     ion3.
 
 %prep
-%setup -q -n compiz-plugins-unsupported-%{version}
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %{__glib_gettextize}
@@ -59,14 +60,15 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
 
-%find_lang compiz-plugins-unsupported
+%find_lang %{pkgname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f compiz-plugins-unsupported.lang
+%files -f %{pkgname}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_libdir}/compiz/*.so
 %{_datadir}/compiz/*.xml
 %{_datadir}/compiz/*.png
+%{_datadir}/compiz/*.svg
