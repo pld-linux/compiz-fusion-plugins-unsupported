@@ -9,11 +9,14 @@ Group:		X11
 Source0:	http://releases.compiz.org/%{version}/%{pkgname}-%{version}.tar.bz2
 # Source0-md5:	73c7d70040cd4fd48ea29677b0f2f21e
 URL:		http://www.compiz.org/
+BuildRequires:	GConf2-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	compiz-bcop >= %{version}
 BuildRequires:	compiz-devel >= %{version}
+BuildRequires:	compiz-fusion-plugins-main-devel >= %{version}
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
