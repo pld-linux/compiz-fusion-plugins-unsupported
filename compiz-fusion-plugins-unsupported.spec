@@ -16,7 +16,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	compiz-bcop >= %{version}
 BuildRequires:	compiz-devel >= %{version}
 BuildRequires:	compiz-fusion-plugins-main-devel >= %{version}
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libtool
